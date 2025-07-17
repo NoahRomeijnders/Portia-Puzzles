@@ -1,0 +1,25 @@
+Portia 8, There are 7 true statements
+The portrait is not in the gold casket
+The statements on the silver casket are true
+The other statements on this casket are false
+The portrait is in the lead casket
+The portrait is not in this casket
+The statements on the lead casket are true
+The portrait is in the silver casket
+The other statements on this casket are true
+The portrait is not in this casket
+The portrait is not in the lead casket
+The statements on the lead casket are false
+The portrait is in the lead casket
+The other statements on this casket are true
+The portrait is not in the silver casket
+The other statements on this casket are false
+The statements on the lead casket are true
+The portrait is in this casket
+The portrait is not in the silver casket
+The portrait is not in the lead casket
+The portrait is not in this casket
+The portrait is in the gold casket
+The other statements on this casket are false
+The portrait is in the silver casket
+The other statements on this casket are true

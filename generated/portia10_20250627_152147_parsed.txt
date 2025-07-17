@@ -1,0 +1,126 @@
+{
+    "portia": 10,
+    "true_statements": 9,
+    "caskets": {
+        "gold": [
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "lead"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "lead"
+            },
+            {
+                "mentioned_casket": "silver",
+                "statement_truth": "true"
+            },
+            {
+                "mentioned_casket": "silver",
+                "statement_truth": "false"
+            },
+            {
+                "other_statements_truth": "true"
+            },
+            {
+                "other_statements_truth": "false"
+            },
+            {
+                "mentioned_casket": "lead",
+                "statement_truth": "false"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "silver"
+            }
+        ],
+        "silver": [
+            {
+                "other_statements_truth": "false"
+            },
+            {
+                "mentioned_casket": "lead",
+                "statement_truth": "true"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "lead"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "silver"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "silver"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "silver"
+            },
+            {
+                "other_statements_truth": "true"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "silver"
+            }
+        ],
+        "lead": [
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "lead"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "gold"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "silver"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "silver"
+            },
+            {
+                "other_statements_truth": "true"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "lead"
+            },
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "lead"
+            },
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "lead"
+            },
+            {
+                "other_statements_truth": "false"
+            }
+        ]
+    }
+}

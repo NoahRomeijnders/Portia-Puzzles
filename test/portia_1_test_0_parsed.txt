@@ -1,0 +1,24 @@
+{
+    "portia": 1,
+    "true_statements": 1,
+    "caskets": {
+        "gold": [
+            {
+                "mentioned_casket": "silver",
+                "statement_truth": "false"
+            }
+        ],
+        "silver": [
+            {
+                "contains_portrait": true,
+                "mentioned_casket": "silver"
+            }
+        ],
+        "lead": [
+            {
+                "contains_portrait": false,
+                "mentioned_casket": "lead"
+            }
+        ]
+    }
+}
