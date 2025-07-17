@@ -40,6 +40,15 @@ statement_objects = [
 
 
 def create_statements(n):
+    """
+    Creates a valid statement combination for a Portia n puzzle
+
+    input : n = amount of statements per casket
+
+    output: list selected["gold"] + selected["silver"] + selected["lead"] 
+        where selected["casket"] is the statements chosen for that casket
+    
+    """
 
     caskets = ["gold", "silver", "lead"]
 
@@ -104,7 +113,13 @@ def create_statements(n):
 
 
 def generate_puzzle(n, outputfile):
+    """
+    generates a Portia-n-m puzzle in outputfile 
 
+    input : n = amount of statements per casket
+            outputfile = outputfile
+    output: Natural language representation of a valid Portia-n-m puzzle in outputfile 
+    """
     MAX_ATTEMPTS = 50
     max_statements = 3 * n
 

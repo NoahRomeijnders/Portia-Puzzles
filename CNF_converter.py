@@ -4,6 +4,15 @@ from pysat import solvers
 from itertools import combinations
 
 def convert_JSON_CNF(parsed_data):
+    """
+    converts json to CNF
+
+    input : 
+        parsed_data = outputfile
+
+    output: list of atoms or negation of atoms
+    """
+
     portia_n = parsed_data["portia"] 
     amount_statements = portia_n * 3
     statement_ids = create_statement_ids(amount_statements)
@@ -32,6 +41,15 @@ def create_statement_ids(m):
 
 
 def n_m_true_statements(m, statement_ids):
+    """
+    creates cnf formula of n_m_true_statements
+    see 3.3 in thesis
+
+    input : 
+        m = int amount of true statements
+        statement_ids = list of all statements id
+    output: list of atoms or negation of atoms
+    """
     n_m_true_statements = []
     n = len(statement_ids)
     if m == 0:
@@ -61,6 +79,16 @@ def n_m_true_statements(m, statement_ids):
 
 
 def statement_pattern_statement_to_cnf(statement, statement_id):
+    """
+    creates cnf formula of statement_pattern
+    see 3.3 in thesis
+
+    input : 
+        statement = this statement
+        statement_id = this statement id
+
+    output: list of atoms or negation of atoms
+    """
     casket = casket_short(statement["mentioned_casket"])
     if statement["contains_portrait"] :
         return [[ casket,f"~{statement_id}"], [f"~{casket}", statement_id]]
@@ -70,6 +98,17 @@ def statement_pattern_statement_to_cnf(statement, statement_id):
     
     
 def  truth_pattern_statement_to_cnf (statement, statement_id, portia_n):
+    """
+    creates cnf formula of truth_pattern
+    see 3.3 in thesis
+
+    input : 
+        statement = this statement
+        statement_id = this statement id
+        portia_n = amount of statements per casket
+
+    output: list of atoms or negation of atoms
+    """
     mentioned_casket = statement["mentioned_casket"]
     statement_id_mentioned_casket = statement_id_caskets(mentioned_casket, portia_n)
     if(statement["statement_truth" ] == "true"):
@@ -86,9 +125,20 @@ def  truth_pattern_statement_to_cnf (statement, statement_id, portia_n):
         temp.append(statement_id)
         x.append(temp)
         return  x
-    # " /\\\n" + x + " /\\\n" + cnf_string(temp) 
 
 def other_pattern_to_cnf(statement, statement_id, portia_n, casket):
+    """
+    creates cnf formula of other_pattern
+    see 3.3 in thesis
+
+    input : 
+        statement = this statement
+        statement_id = this statement id
+        portia_n = amount of statements per casket
+        casket = this casket
+
+    output: list of atoms or negation of atoms
+    """
     mentioned_casket = casket
     statement_id_mentioned_casket = statement_id_caskets(mentioned_casket, portia_n)
     statement_id_mentioned_casket.remove(statement_id)
@@ -100,7 +150,7 @@ def other_pattern_to_cnf(statement, statement_id, portia_n, casket):
         temp.append(statement_id)
         x.append(temp)
         return x
-        # return " /\\\n" + x + " /\\\n" + cnf_string(temp) 
+
 
     else :
         x = [[  "~" + n , "~" + statement_id] for n in statement_id_mentioned_casket]
@@ -108,10 +158,20 @@ def other_pattern_to_cnf(statement, statement_id, portia_n, casket):
         temp.append(statement_id)
         x.append(temp)
         return x
-    # " /\\\n" + x + " /\\\n" + cnf_string(temp) 
+  
 
 
 def statement_id_caskets(casket, portia_n):
+    """
+    gives list of statement ids on this casket
+    see 3.3 in thesis
+
+    input : 
+        portia_n = amount of statements per casket
+        casket = this casket
+
+    output: list of statement ids
+    """
     statement_id_caskets = []
     for i in range(1,portia_n + 1):
         if casket == "lead":

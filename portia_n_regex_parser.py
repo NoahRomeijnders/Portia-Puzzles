@@ -99,8 +99,16 @@ def parse_puzzle(text):
 
 
 
-# Cycle detection using DFS
+
 def has_cycle(graph):
+    """
+    Cycle detection using DFS
+
+    input : graph = tree graph 
+
+    output: boolean, True if and only if the graph has a cycle
+    
+    """
     visited = set()
     path = set()
 
