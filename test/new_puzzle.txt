@@ -1,0 +1,4 @@
+Portia 1, There are 2 true statements
+The portrait is in this casket
+The portrait is in the lead casket
+The statement on the silver casket is false

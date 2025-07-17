@@ -1,0 +1,7 @@
+Portia 2, There are 3 true statements
+The portrait is not in the silver casket
+The portrait is not in the gold casket
+The statements on the gold casket are true
+The portrait is not in this casket
+The portrait is not in the lead casket
+The portrait is not in this casket
